@@ -4,15 +4,68 @@
     <meta charset="utf-8" />
     <title>Index</title>
     <link rel="stylesheet" type="text/css" href="style/style.css" />
-    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="js/common_js.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="header"></div><!--end HEADER-->
-        <div class="content"></div><!--end CONTENT-->
-        <div class="footer"></div><!--end FOOTER-->
-    </div><!--WRAPPER-->
+    <header class="header">
+        <h1 class="main-logo">
+            <a href="#">
+                <img src="images/header/main-logo.png" alt="">
+            </a>
+        </h1>
+
+        <div class="box-call-back">
+            <span class="tel-text">+7 (812) 925-95-54</span>
+            <span class="wrap-btn-call-back">
+                <input type="button" value="Перезвоните мне">
+            </span>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href='#'>Преимущества</a></li>
+                <li><a href='#'>Как мы работаем</a></li>
+                <li><a href='#'>Наши клиенты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="wrap-form-top">
+            <div class="content">
+                <header class="header-big">Локальные очистные сооружения Traidenis</header>
+
+                <form class="form-call-back" action="" name="call-back">
+                    <fieldset>Закажите бесплатный расчет стоимости и получите ответ сегодня</fieldset>
+                    <input class="input-name" type="text" name="name" placeholder="Представьтесь">
+                    <input class="input-tel" type="text" name="tel" placeholder="Введите Ваш номер телефона">
+                    <input class="feedback" type="submit" name="send" placeholder="Отправить">
+                </form>
+
+                <footer>
+                    <strong>Акция!</strong>
+
+                    <div class="box-">
+                        <img alt="">
+                        <span class="wrap-text">
+                            <span>
+                                Закажите бесплатній расчет стоимости прямо сейчас и получите датчик-сигнализатор
+                                в подарок при поставке оборудования!
+                            </span>
+                        </span>
+                    </div>
+
+                    <div class="timer"></div>
+                </footer>
+            </div>
+        </section><!--end WRAP-FORM-TOP-->
+    </main>
+
+    <div class="footer"></div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/common_js.js"></script>
 </body>
 </html>

@@ -1,49 +1,220 @@
-@import '//fonts.googleapis.com/css?family=Lato:400,400italic|Arvo:700,400,400italic';
-
-body {
-    background: #F0EFE7;
-    margin: 0;
-    padding: 0;
-    font: 15px/1.5 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #4E443C;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+/*----------------------------------------------------------------------------------*/
+/*------------------------------RESET DEFAULT STYLES--------------------------------*/
+/*----------------------------------------------------------------------------------*/
+html,body                       { width:100%; height:100%; }
+body                            { padding:0; margin:0; font:12px 'PT Sans', arial, sans-serif; background:#fff; color:#000; }
+div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,input,textarea {
+	padding:0;
+	margin:0;
+	outline:none;
+	list-style:none;
 }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Arvo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  text-align: center;
-  font-weight: normal;
-  text-rendering: optimizelegibility;
+select, input, textarea        { font-size:12px; vertical-align:middle; }
+textarea                       { vertical-align:top; }
+:focus                         { outline:none; }
+input[type=submit]             { cursor:pointer; }
+img, fieldset                  { border:0; }
+table                          { border-collapse:collapse; border-spacing:0; }
+a:link, a:visited              { font:12px 'PT Sans', arial, sans-serif; color:#000; text-decoration:underline; }
+a:hover                        { text-decoration:none; }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------DEFAULT CLASSES------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.float-r           	           { float:right !important; }
+.float-l                       { float:left !important; }
+.no-float                      { float:none !important; }
+.no-border                     { border:0 !important; }
+.no-bg                         { background:none !important; }
+.no-margin                     { margin:0 !important; }
+.no-padding                    { padding:0 !important; }
+.no-display                    { display:none !important; }
+.display                       { display:block !important; }
+.inline                        { display:inline !important; }
+.overflow                      { overflow:hidden !important; }
+.align-r                       { text-align:right !important; }
+.align-l                       { text-align:left !important; }
+.align-c                       { text-align:center !important; }
+.clear                         { clear:both; }
+.clearfix:after                { content: ""; display: block; clear: both; visibility: hidden;}
+.clearfix                      { display: inline-block; width: 100% }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------COMMON---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.header,
+.content {
+    width: 940px;
+    margin: 0 auto;
 }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------WRAPPER--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
 
-h1 {
-    color: #4E443C;
-    font-size: 36px;
-    font-weight: bold;
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------HEADER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.header {
+    overflow: hidden;
+    padding: 20px 0;
 }
+    .main-logo {
+        float: left;
+    }
+        .main-logo img,
+        .main-logo a {
+            display: block;
+            width: 250px;
+            height: 64px;
+        }
+    .box-call-back {
+        float: right;
+    }
+        .tel-text {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .wrap-btn-call-back {
+            position: relative;
+            display: block;
+        }
+            .wrap-btn-call-back:after {
+                content: '';
+                position: absolute;
+                left: 15px;
+                top: -5px;
+                display: block;
+                width: 11px;
+                height: 5px;
+                background: url("../images/header/icon_triagle.png") no-repeat;
+            }
+            .wrap-btn-call-back input {
+                width: 150px;
+                padding: 5px 0 6px;
+                background: #83AA1D;
+                color: #fff;
+                font-size: 14px;
+                border: none;
+                cursor: pointer;
 
-h2, h2 a {
-    color: #F14E32;
-}
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+            }
+            .wrap-btn-call-back input:hover {
+                color: #E1E1E1;
+            }
+    .main-nav {
+        overflow: hidden;
+        padding-top: 10px;
+        text-align: center;
+    }
+        .main-nav li {
+            display: inline-block;
+            margin-left: 15px;
+        }
+        .main-nav li:first-child {
+            margin-left: 0;
+        }
+            .main-nav a {
+                display: block;
+                padding: 7px 13px;
+                font: 14px 'PT Sans', sans-serif;
+                text-decoration: none;
+                border: 2px solid transparent;
 
-h3, h3 a {
-  color: #0388A6;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                border-radius: 4px;
+            }
+            .main-nav a:hover {
+                border: 2px solid #94C11F;
+            }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------CONTENT--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.wrap-form-top {
+    height: 445px;
+    padding-top: 35px;
+    background: url("../images/content/fon_form1.jpg") center no-repeat;
+    color: #fff;
 }
+    .header-big {
+        margin-bottom: 55px;
+        text-align: center;
+        font-size: 46px;
+        font-weight: 400;
+    }
+    .form-call-back {
+        position: relative;
+        padding: 0 38px 40px 38px;
+        border: 2px solid #697D84;
+        border-top: none;
+    }
+        .form-call-back:before,
+        .form-call-back:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            display: block;
+            width: 275px;
+            border: 1px solid #697D84;
+        }
+        .form-call-back:after {
+            left: auto;
+            right: 0;
+        }
+        .form-call-back fieldset {
+            position: relative;
+            top: -20px;
+            width: 360px;
+            margin: 0 auto;
+            font-size: 18px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .form-call-back input {
+            width: 251px;
+            padding: 11px 10px;
+            margin-left: 17px;
 
-a {
-  color: #0388A6;
-}
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+        .form-call-back .input-name {
+            margin-left: 0;
+        }
+        .form-call-back .feedback {
+            width: 273px;
+            border: none;
+            background: #2DAAE1;
+            color: #fff;
+            font-size: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .form-call-back .feedback:hover {
+            background: #2690BE;
+        }
+        .input-tel,
+        .input-name {
+            background: #fff;
+            border: 1px solid #fff;
+        }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------FOOTER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
 
-pre {
-  border:1px solid #000;
-  overflow-x:auto;
-  background: #222;
-  color: #fff;
-  text-shadow: none;
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------RESPONSIVE-----------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (min-width: 1920px) {
+    .wrap-form-top {
+        background-size: 100%;
+    }
 }
-
-.wrapper {
-    max-width: 620px;
-    padding: 0 20px 40px 20px;
-    margin: auto;
-}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------OTHER----------------------------------------*/
+/*----------------------------------------------------------------------------------*/
