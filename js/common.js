@@ -54,10 +54,10 @@ $(document).ready(function(){
 
     getfrominputs_914();
 
-    var firstBlockAnimate = $('.box-advantages').offset().top,
-        secondBlockAnimate = $('.box-steps').offset().top,
-        thirdBlockAnimate = $('.box-clients').offset().top,
-        arrayAnimateBlock = [firstBlockAnimate, secondBlockAnimate, thirdBlockAnimate];
+    var firstBlock = $('.box-advantages'),
+        secondBlock = $('.box-steps'),
+        thirdBlock = $('.box-clients'),
+        arrayAnimateBlock = [firstBlock, secondBlock, thirdBlock];
 
     $('.main-nav a').on('click', function(e){
         e.preventDefault();
@@ -65,7 +65,7 @@ $(document).ready(function(){
         var curClickElement = $(this).parent().index();
 
         $('html, body').animate({
-            scrollTop: arrayAnimateBlock[curClickElement] - 154
+            scrollTop: arrayAnimateBlock[curClickElement].offset().top - 154
         })
     });
 
@@ -81,7 +81,7 @@ $(document).ready(function(){
                 }
             });
 
-            if(curPositionWindow >= curBlockAnimate -157) {
+            if(curPositionWindow >= curBlockAnimate.offset().top -157) {
                 curClickElement.eq(numberElement).children('a').addClass('active');
                 curClickElement
                     .eq(numberElement)
@@ -92,13 +92,13 @@ $(document).ready(function(){
                     .children('a')
                     .removeClass('active');
             }
-            else if(curPositionWindow < 499) {
+            else if(curPositionWindow.offset().top < 499) {
                 curClickElement.children('a').removeClass('active');
             }
         }
-        scrollingNav(firstBlockAnimate);
-        scrollingNav(secondBlockAnimate);
-        scrollingNav(thirdBlockAnimate);
+        scrollingNav(firstBlock);
+        scrollingNav(secondBlock);
+        scrollingNav(thirdBlock);
     });
 
     /*placeholder support for ie8*/
