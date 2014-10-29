@@ -76,9 +76,7 @@ $(document).ready(function(){
         if(popupInputTell.val().length < 6) {
             e.preventDefault();
 
-            if(popupInputTell.val().length < 6) {
-                $('.show-tooltip').css('display', 'block').animate({'opacity': '1'}, 300);
-            }
+            $('.show-tooltip').css('display', 'block').animate({'opacity': '1'}, 300);
 
             $('.tel-valid-js').blur(function(){
                 if($('.tel-valid-js').val().length > 5) {
