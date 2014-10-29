@@ -186,6 +186,13 @@ a:hover                        { text-decoration:none; }
             text-transform: uppercase;
             text-align: center;
         }
+        .popup-form fieldset {
+            top: 0;
+            margin-bottom: 20px;
+        }
+        .popup-form {
+            padding: 20px 38px;
+        }
         .form-call-back input {
             width: 251px;
             padding: 11px 10px;
@@ -195,8 +202,39 @@ a:hover                        { text-decoration:none; }
             -moz-border-radius: 4px;
             border-radius: 4px;
         }
+        .popup-form input {
+            display: block;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+        }
+        .tooltip-tel {
+            position: relative;
+        }
+            .show-tooltip {
+                opacity: 0;
+                display: none;
+                position: absolute;
+                top: -47px;
+                left: 284px;
+                width: 200px;
+                padding: 10px 0;
+                background: #FFFFA6;
+                text-align: center;
+            }
         .form-call-back .input-name {
             margin-left: 0;
+        }
+        .comment-block {
+            width: 251px;
+            padding: 10px;
+            height: 70px;
+            resize: none;
+            border: 1px solid #ccc;
+            font: 14px 'PT Sans', arial, sans-serif;
+
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
         }
         .form-call-back .feedback {
             width: 273px;
