@@ -81,7 +81,7 @@ $(document).ready(function(){
                 }
             });
 
-            if(curPositionWindow >= curBlockAnimate -154) {
+            if(curPositionWindow >= curBlockAnimate -157) {
                 curClickElement.eq(numberElement).children('a').addClass('active');
                 curClickElement
                     .eq(numberElement)
@@ -92,9 +92,37 @@ $(document).ready(function(){
                     .children('a')
                     .removeClass('active');
             }
+            else if(curPositionWindow < 499) {
+                curClickElement.children('a').removeClass('active');
+            }
         }
         scrollingNav(firstBlockAnimate);
         scrollingNav(secondBlockAnimate);
         scrollingNav(thirdBlockAnimate);
+    });
+
+    /*placeholder support for ie8*/
+    (function ($) {
+        $.support.placeholder = ('placeholder' in document.createElement('input'));
+    })(jQuery);
+
+
+    //fix for IE7 and IE8
+    $(function () {
+        if (!$.support.placeholder) {
+            $("[placeholder]").focus(function () {
+                if ($(this).val() == $(this).attr("placeholder")) $(this).val("");
+            }).blur(function () {
+                if ($(this).val() == "") $(this).val($(this).attr("placeholder"));
+            }).blur();
+
+            $("[placeholder]").parents("form").submit(function () {
+                $(this).find('[placeholder]').each(function() {
+                    if ($(this).val() == $(this).attr("placeholder")) {
+                        $(this).val("");
+                    }
+                });
+            });
+        }
     });
 });
