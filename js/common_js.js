@@ -53,4 +53,48 @@ $(document).ready(function(){
         },1000);}
 
     getfrominputs_914();
+
+    var firstBlockAnimate = $('.box-advantages').offset().top,
+        secondBlockAnimate = $('.box-steps').offset().top,
+        thirdBlockAnimate = $('.box-clients').offset().top,
+        arrayAnimateBlock = [firstBlockAnimate, secondBlockAnimate, thirdBlockAnimate];
+
+    $('.main-nav a').on('click', function(e){
+        e.preventDefault();
+
+        var curClickElement = $(this).parent().index();
+
+        $('html, body').animate({
+            scrollTop: arrayAnimateBlock[curClickElement] - 154
+        })
+    });
+
+    $(window).on('scroll', function(){
+        var curPositionWindow = $(window).scrollTop(),
+            curClickElement = $('.main-nav li');
+
+        var numberElement;
+        function scrollingNav(curBlockAnimate){
+            arrayAnimateBlock.forEach(function(element, index){
+                if(arrayAnimateBlock[index] == curBlockAnimate) {
+                    numberElement = index;
+                }
+            });
+
+            if(curPositionWindow >= curBlockAnimate -154) {
+                curClickElement.eq(numberElement).children('a').addClass('active');
+                curClickElement
+                    .eq(numberElement)
+                    .children('a')
+                    .addClass('active')
+                    .parent()
+                    .siblings()
+                    .children('a')
+                    .removeClass('active');
+            }
+        }
+        scrollingNav(firstBlockAnimate);
+        scrollingNav(secondBlockAnimate);
+        scrollingNav(thirdBlockAnimate);
+    });
 });
