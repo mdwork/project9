@@ -528,9 +528,42 @@ a:hover                        { text-decoration:none; }
 .box-gallery {
     margin-bottom: 80px;
 }
-    .fancybox a {
-        text-decoration: none;
+    .fancybox {
+        width: 960px;
     }
+        .fancybox a {
+            position: relative;
+            margin: 0 17px 17px 0;
+            text-decoration: none;
+        }
+        .fancybox a:hover .overview {
+            display: block;
+        }
+            .fancybox .overview {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: none;
+                width: 100%;
+                height: 100%;
+                background: #ADD230;
+                opacity: 0.9;
+                filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+            }
+                .fancybox .overview:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    margin: -17px 0 0 -24px;
+                    width: 48px;
+                    height: 34px;
+                    background: url("../images/content/hover_icon.png")no-repeat;
+                }
+            .fancybox img {
+                display: block;
+            }
 
 .wrap-form-bottom {
     height: 300px;
