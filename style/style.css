@@ -136,6 +136,7 @@ a:hover                        { text-decoration:none; }
 .wrap-form-top {
     height: 445px;
     padding-top: 35px;
+    margin-bottom: 90px;
     background: url("../images/content/fon_form1.jpg") center no-repeat;
     color: #fff;
 }
@@ -144,11 +145,13 @@ a:hover                        { text-decoration:none; }
         text-align: center;
         font-size: 46px;
         font-weight: 400;
+        text-shadow: 0px 1px 3px rgba(0, 0, 2, 1);
     }
     .form-call-back {
         position: relative;
         padding: 0 38px 40px 38px;
-        border: 2px solid #697D84;
+        margin-bottom: 30px;
+        border: 2px solid #526663;
         border-top: none;
     }
         .form-call-back:before,
@@ -159,7 +162,7 @@ a:hover                        { text-decoration:none; }
             content: '';
             display: block;
             width: 275px;
-            border: 1px solid #697D84;
+            border: 1px solid #526663;
         }
         .form-call-back:after {
             left: auto;
@@ -203,6 +206,305 @@ a:hover                        { text-decoration:none; }
             background: #fff;
             border: 1px solid #fff;
         }
+
+    .bolt-text {
+        margin-top: 30px;
+        font-size: 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+    .wrap-timer {
+        position: relative;
+        padding: 13px 18px;
+        border: 2px solid #526663;
+        border-left: none;
+    }
+        .wrap-timer:after,
+        .wrap-timer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            height: 42px;
+            border: 1px solid #526663;
+        }
+        .wrap-timer:before {
+            top: auto;
+            bottom: 0;
+        }
+        .wrap-timer .triagle_icon {
+            position: absolute;
+            top: 43px;
+            left: -9px;
+            display: block;
+            width: 10px;
+            height: 13px;
+            background: url("../images/content/icon_triagle_timer.png") no-repeat;
+        }
+        .wrap-timer .text-timer {
+            display: block;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+            .wrap-block-timer {
+                position: relative;
+                display: inline-block;
+                text-align: center;
+                margin-left: 15px;
+            }
+            .wrap-block-timer:before {
+                content: ':';
+                position: absolute;
+                left: -11px;
+                top: 5px;
+                display: block;
+                font-size: 14px;
+            }
+            .wrap-block-timer:first-child:before {
+                display: none;
+            }
+            .wrap-block-timer:first-child {
+                margin-left: 0;
+            }
+                .result-day,
+                .result-hour,
+                .result-minute,
+                .result-second {
+                    display: table-cell;
+                    height: 30px;
+                    width: 30px;
+                    background: #135E7F;
+                    font-size: 16px;
+                    font-weight: bold;
+                    vertical-align: middle;
+
+                    -webkit-border-radius: 4px;
+                    -moz-border-radius: 4px;
+                    border-radius: 4px;
+                }
+    .box-description-action {
+        width: 420px;
+        margin: 0 auto;
+    }
+        .box-description-action img {
+            float: left;
+            width: 100px;
+            height: 100px;
+            margin-right: 30px;
+        }
+        .box-description-action .wrap-text {
+            display: table-cell;
+            height: 100px;
+            vertical-align: middle;
+            font-size: 14px;
+        }
+
+.box-advantages {
+    margin-bottom: 90px;
+}
+    .name-section {
+        width: 445px;
+        margin: 0 auto 45px;
+        padding: 10px 0;
+        font-size: 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        color: #303030;
+        background: #F3F3F3;
+        letter-spacing: 4px;
+    }
+    .list-advantages {
+        overflow: hidden;
+    }
+        .list-advantages li {
+            float: left;
+            height: 259px;
+        }
+            .list-advantages .third-block .description-advantages,
+            .list-advantages .fourth-block .description-advantages,
+            .list-advantages .seventh-block .description-advantages,
+            .list-advantages .eighth-block .description-advantages,
+            .list-advantages .eleventh-block .description-advantages,
+            .list-advantages .twelfth-block .description-advantages {
+                float: right;
+            }
+                .list-advantages .third-block .description-advantages:after,
+                .list-advantages .fourth-block .description-advantages:after,
+                .list-advantages .seventh-block .description-advantages:after,
+                .list-advantages .eighth-block .description-advantages:after,
+                .list-advantages .eleventh-block .description-advantages:after,
+                .list-advantages .twelfth-block .description-advantages:after {
+                    right: auto;
+                    left: -10px;
+                    background: url("../images/content/triagle_left.png") no-repeat;
+                }
+            .first-block .description-advantages {
+                background-image: url("../images/content/bg1.png");
+                background-position: 15px 20px;
+            }
+            .second-block .description-advantages {
+                background-image: url("../images/content/bg2.png");
+                background-position: 15px 20px;
+            }
+            .third-block .description-advantages {
+                background-image: url("../images/content/bg3.png");
+                background-position: 15px 20px;
+            }
+            .fourth-block .description-advantages {
+                background-image: url("../images/content/bg4.png");
+                background-position: 15px 20px;
+            }
+            .fifth-block .description-advantages {
+                background-image: url("../images/content/bg5.png");
+                background-position: 15px 20px;
+            }
+            .sixth-block .description-advantages {
+                background-image: url("../images/content/bg6.png");
+                background-position: 15px 20px;
+            }
+            .seventh-block .description-advantages {
+                background-image: url("../images/content/bg7.png");
+                background-position: 15px 20px;
+            }
+            .eighth-block .description-advantages {
+                background-image: url("../images/content/bg8.png");
+                background-position: 15px 20px;
+            }
+            .ninth-block .description-advantages {
+                background-image: url("../images/content/bg9.png");
+                background-position: 15px 20px;
+            }
+            .tenth-block .description-advantages {
+                background-image: url("../images/content/bg10.png");
+                background-position: 15px 20px;
+            }
+            .eleventh-block .description-advantages {
+                background-image: url("../images/content/bg11.png");
+                background-position: 15px 20px;
+            }
+            .twelfth-block .description-advantages {
+                background-image: url("../images/content/bg12.png");
+                background-position: 15px 20px;
+            }
+            .description-advantages {
+                float: left;
+                position: relative;
+                width: 205px;
+                height: 216px;
+                padding: 28px 15px 15px;
+                background: #2DAAE1 no-repeat;
+                color: #fff;
+            }
+                .description-advantages:after {
+                    content: '';
+                    position: absolute;
+                    top: 120px;
+                    right: -10px;
+                    display: block;
+                    width: 15px;
+                    height: 24px;
+                    background: url("../images/content/triagle_right.png") no-repeat;
+                }
+                .description-advantages .number {
+                    display: block;
+                    margin-bottom: 35px;
+                    font-size: 24px;
+                    font-weight: bold;
+                    opacity: 0.4;
+                    text-align: right;
+                }
+                .description-advantages .text {
+                    font-size: 14px;
+                    text-align: left;
+                }
+
+.box-steps {
+    margin-bottom: 105px;
+}
+    .list-steps {
+        overflow: hidden;
+        position: relative;
+    }
+        .list-steps:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 125px;
+            left: 0;
+            height: 5px;
+            width: 938px;
+            background: #94C11F;
+        }
+        .list-steps li {
+            position: relative;
+            z-index: 5;
+            float: left;
+            height: 260px;
+            width: 130px;
+            margin-left: 72px;
+            background: #fff;
+            color: #303030;
+        }
+        .list-steps li:first-child {
+            margin-left: 0;
+        }
+        .list-steps .odd {
+            top: -7px;
+        }
+            .list-steps li img {
+                margin-top: 63px;
+            }
+            .list-steps li div {
+                margin-top: 5px;
+                font-size: 14px;
+                text-align: center;
+            }
+            .list-steps .odd div {
+                position: absolute;
+                top: 0;
+                width: 130px;
+                margin-top: 3px;
+            }
+                .list-steps li header {
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+
+.box-clients {
+    margin-bottom: 95px;
+}
+    .list-clients {
+        overflow: hidden;
+    }
+        .list-clients li {
+            position: relative;
+            float: left;
+            width: 235px;
+            height: 70px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+            .list-clients li span {
+                display: table-cell;
+                width: 235px;
+                height: 70px;
+                vertical-align: bottom;
+            }
+
+.box-gallery {
+    margin-bottom: 80px;
+}
+
+.wrap-form-bottom {
+    height: 300px;
+    padding-top: 60px;
+    background: url("../images/content/fon_form2.jpg") center no-repeat;
+    color: #fff;
+}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------FOOTER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -218,3 +520,6 @@ a:hover                        { text-decoration:none; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------OTHER----------------------------------------*/
 /*----------------------------------------------------------------------------------*/
+.mar-bottom {
+    margin-bottom: 75px;
+}
