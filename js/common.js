@@ -92,7 +92,7 @@ $(document).ready(function(){
                     .children('a')
                     .removeClass('active');
             }
-            else if(curPositionWindow.offset().top < 499) {
+            else if(curPositionWindow < 499) {
                 curClickElement.children('a').removeClass('active');
             }
         }
