@@ -48,7 +48,10 @@
                 <form class="form-call-back mar-bottom" action="" name="call-back">
                     <fieldset>Закажите бесплатный расчет стоимости и получите ответ сегодня</fieldset>
                     <input class="input-name" type="text" name="name" placeholder="Представьтесь">
-                    <input class="input-tel tel-valid-js" type="text" name="tell" placeholder="Введите Ваш номер телефона">
+                    <span class="tooltip-tel">
+                        <input class="input-tel tel-valid-js" type="text" name="tell" placeholder="Введите Ваш номер телефона">
+                        <span class="show-tooltip">Заполните поле «Телефон»</span>
+                    </span>
 
                     <input class="feedback" type="submit" name="send" placeholder="Отправить">
                 </form>
@@ -347,7 +350,10 @@
                 <form class="form-call-back" action="" name="call-back">
                     <fieldset>Закажите бесплатный расчет стоимости и получите ответ сегодня</fieldset>
                     <input class="input-name" type="text" name="name" placeholder="Представьтесь">
-                    <input class="input-tel tel-valid-js" type="text" name="tell" placeholder="Введите Ваш номер телефона">
+                    <span class="tooltip-tel">
+                        <input class="input-tel tel-valid-js" type="text" name="tell" placeholder="Введите Ваш номер телефона">
+                        <span class="show-tooltip">Заполните поле «Телефон»</span>
+                    </span>
 
                     <input class="feedback" type="submit" name="send" placeholder="Отправить">
                 </form>
@@ -389,7 +395,7 @@
                     <fieldset>Закажите бесплатный расчет стоимости и получите ответ сегодня</fieldset>
                     <input class="input-name" type="text" name="name" placeholder="Представьтесь">
                     <span class="tooltip-tel">
-                        <input class="input-tel tel-valid-jss" type="text" name="tell" placeholder="Введите Ваш номер телефона">
+                        <input class="input-tel tel-valid-js" type="text" name="tell" placeholder="Введите Ваш номер телефона">
                         <span class="show-tooltip">Заполните поле «Телефон»</span>
                     </span>
                     <textarea class="comment-block" name="comments" placeholder="Ваш комментарий"></textarea>
@@ -402,7 +408,7 @@
 
     <!--<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/common.js"></script>
+
 
     <!-- Add mousewheel plugin (this is optional) -->
     <script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
@@ -440,5 +446,6 @@
     </script>
     <script src="js/jquery.countdown.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/common.js"></script>
 </body>
 </html>

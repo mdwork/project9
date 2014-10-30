@@ -163,6 +163,9 @@ a:hover                        { text-decoration:none; }
         border: 2px solid #526663;
         border-top: none;
     }
+    .popup-form {
+        padding: 20px 38px;
+    }
         .form-call-back:before,
         .form-call-back:after {
             position: absolute;
@@ -190,8 +193,9 @@ a:hover                        { text-decoration:none; }
             top: 0;
             margin-bottom: 20px;
         }
-        .popup-form {
-            padding: 20px 38px;
+        .popup-form .show-tooltip {
+            top: -47px;
+            left: 284px;
         }
         .form-call-back input {
             width: 251px;
@@ -214,11 +218,12 @@ a:hover                        { text-decoration:none; }
                 opacity: 0;
                 display: none;
                 position: absolute;
-                top: -47px;
-                left: 284px;
+                top: 33px;
+                left: 80px;
                 width: 200px;
                 padding: 10px 0;
                 background: #FFFFA6;
+                color: #000;
                 text-align: center;
             }
         .form-call-back .input-name {

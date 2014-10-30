@@ -72,17 +72,24 @@ $(document).ready(function(){
     });
 
     $('.feedback').click(function(e){
-        var popupInputTell = $(this).siblings('.tooltip-tel').children('.tel-valid-js');
-        if(popupInputTell.val().length < 6) {
+        var emailBoxValid = $(e.target).siblings('.tooltip-tel'),
+            emailValid = emailBoxValid.find('input'),
+            toolTipBox = emailBoxValid.find('.show-tooltip');
+
+        if(emailValid.val().length < 6) {
             e.preventDefault();
 
-            $('.show-tooltip').css('display', 'block').animate({'opacity': '1'}, 300);
+            emailValid.addClass('no-valid-email_js');
+            toolTipBox.css('display','block').animate({'opacity':'1'}, 300);
 
-            $('.tel-valid-js').blur(function(){
-                if($('.tel-valid-js').val().length > 5) {
-                    $('.show-tooltip').css({'display':'none', 'opacity':'0'});
+            emailValid.on('keyup', function(){
+                if(emailValid.val().length > 5) {
+                    emailValid.removeClass('no-valid-email_js');
+                    $(this).css('border-color','#D7D5CF');
+                    toolTipBox.css({'display':'none', 'opacity':'0'});
                 }
             });
         }
+
     });
 });
